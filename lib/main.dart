@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'add_list_view.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatefulWidget {
@@ -50,51 +52,38 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               child: new Text("Welcome Home"),
             ),
             new Center(
-              child: new Text("This is Favorites"),
+              child: new AddListView(),
             ),
             new Center(
               child: new Text("Lets Guess"),
             ),
           ],
         ),
-          bottomNavigationBar: Material(
-              color: Colors.amber,
-              child:TabBar(
-                  controller: controller,
-                  tabs: <Widget>[
-                      new Tab(
-                          icon: Icon(
-                              Icons.home,
-                          ),
-                      ),
-                      new Tab(
-                          icon: Icon(
-                              Icons.favorite,
-                          ),
-                      ),
-                      new Tab(
-                          icon: Icon(
-                              Icons.ac_unit,
-                          ),
-                      ),
-                  ],
+        bottomNavigationBar: Material(
+          color: Colors.amber,
+          child: TabBar(
+            controller: controller,
+            tabs: <Widget>[
+              new Tab(
+                icon: Icon(
+                  Icons.home,
+                ),
               ),
+              new Tab(
+                icon: Icon(
+                  Icons.favorite,
+                ),
+              ),
+              new Tab(
+                icon: Icon(
+                  Icons.ac_unit,
+                ),
+              ),
+            ],
           ),
+        ),
       ),
     );
   }
 }
 
-//new Scaffold(
-//appBar: new AppBar(
-//title: Text("tabbar"),
-//bottom: TabBar(
-//controller: _tabController,
-//tabs: <Widget>[
-//new Tab(icon: Icon(Icons.home,),),
-//new Tab(icon: Icon(Icons.favorite,),),
-//new Tab(icon: Icon(Icons.ac_unit,),),
-//],
-//),
-//),
-//)
