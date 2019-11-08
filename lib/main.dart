@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'add_list_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,10 +51,10 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               child: new Text("Welcome Home"),
             ),
             new Center(
-              child: new AddListView(),
+              child: new Text("Welcome Favs"),
             ),
             new Center(
-              child: new Text("Lets Guess"),
+                child: new Text("Welcome Guess"),
             ),
           ],
         ),
